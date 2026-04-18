@@ -30,7 +30,7 @@ function Head({ defaultTitle }: HeadTypes) {
     document.body.setAttribute("data-border-radius", localBorderRadius);
 
     React.useEffect(() => {
-        var mainTitle = defaultTitle ? defaultTitle : "Cobalt";
+        var mainTitle = defaultTitle ? defaultTitle : "Andesine";
         var title = localTitle || mainTitle || "";
         document.title = title;
     }, [localTitle]);
