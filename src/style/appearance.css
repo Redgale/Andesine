@@ -97,21 +97,42 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body[data-appearance="default"] {
-        --background: #030303;
-        --primary: #09283e;
-        --text: white;
-        --text-inverse: white;
-        --font: "Noto Sans";
+        /* Matching the --bg: #0A0A0A */
+        --background: #0A0A0A; 
+        
+        /* Matching the --primary: #FF2E2E */
+        --primary: #FF2E2E; 
+        
+        /* Matching the --text: #FFFFFF */
+        --text: #FFFFFF;
+        
+        --text-inverse: #000000;
+        
+        /* Matching the 'Orbitron' and 'Nunito' fonts */
+        --font: 'Orbitron', 'Nunito', "Noto Sans";
+        
+        /* Extra styling variables from your script */
+        --card-bg: #151515;
+        --accent-shadow: rgba(255, 46, 46, 0.2);
     }
 }
 
 @media (prefers-color-scheme: light) {
     body[data-appearance="default"] {
-        --background: #bfc5cf;
-        --primary: #104972;
-        --text: black;
-        --text-inverse: white;
-        --font: "Noto Sans";
+        /* Maintaining the bright aesthetic but using the theme's red */
+        --background: #F5F5F5;
+        
+        /* High energy red for visibility in light mode */
+        --primary: #FF2E2E; 
+        
+        --text: #0A0A0A;
+        
+        --text-inverse: #FFFFFF;
+        
+        --font: 'Orbitron', 'Nunito', "Noto Sans";
+        
+        --card-bg: #FFFFFF;
+        --accent-shadow: rgba(0, 0, 0, 0.1);
     }
 }
 
