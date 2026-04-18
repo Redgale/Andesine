@@ -40,7 +40,7 @@ function Home() {
     const panel = React.useRef<HTMLDivElement>(null);
     const search = React.useRef<HTMLInputElement>(null);
     const [lastURL, setLastURL] = React.useState("");
-    var homeURL = localStorage.getItem("homeURL") || "cobalt://home";
+    var homeURL = localStorage.getItem("homeURL") || "andesine://home";
     const [loading, setLoading] = React.useState(false);
     const internalURLS = ["home", "blank"];
     const [canGoBack, setCanGoBack] = React.useState(false);
@@ -646,8 +646,8 @@ function Home() {
 
     const SettingsComponent = () => {
         const setHomeURL = (value: string) => {
-            localStorage.setItem("homeURL", value || "cobalt://home");
-            homeURL = value || "cobalt://home";
+            localStorage.setItem("homeURL", value || "andesine://home");
+            homeURL = value || "andesine://home";
         };
 
         const setSearchEngineURL = (value: string) => {
