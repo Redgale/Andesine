@@ -367,7 +367,7 @@ function Home() {
                             ).split("/internal/viewsource?url=")[1];
                     } else {
                         var url =
-                            "cobalt://" +
+                            "andesine://" +
                             web.current.contentWindow.location.pathname.split(
                                 "/internal/"
                             )[1];
@@ -398,14 +398,14 @@ function Home() {
                     : "";
 
                 if (
-                    url.startsWith("cobalt://") ||
+                    url.startsWith("andesine://") ||
                     url.startsWith("view-source:")
                 ) {
                     favicon = "";
                 }
 
-                if (url.startsWith("cobalt://")) {
-                    title = url.split("cobalt://")[1];
+                if (url.startsWith("andesine://")) {
+                    title = url.split("andesine://")[1];
                     title = title.charAt(0).toUpperCase() + title.slice(1);
                 }
 
@@ -584,7 +584,7 @@ function Home() {
                 onClick={() => {
                     setLocalAppearance(theme);
                     if (
-                        currentURL.startsWith("cobalt://") ||
+                        currentURL.startsWith("andesine://") ||
                         currentURL.startsWith("view-source:")
                     ) {
                         if (web.current && web.current.contentWindow) {
@@ -623,7 +623,7 @@ function Home() {
                 onClick={() => {
                     setLocalBorderRadius(name);
                     if (
-                        currentURL.startsWith("cobalt://") ||
+                        currentURL.startsWith("andesine://") ||
                         currentURL.startsWith("view-source:")
                     ) {
                         if (web.current && web.current.contentWindow) {
@@ -1328,7 +1328,7 @@ function Home() {
                         ).split("/internal/viewsource?url=")[1];
                 } else {
                     var url =
-                        "cobalt://" +
+                        "andesine://" +
                         web.current.contentWindow.location.pathname.split(
                             "/internal/"
                         )[1];
@@ -1358,12 +1358,12 @@ function Home() {
                     : ""
                 : "";
 
-            if (url.startsWith("cobalt://") || url.startsWith("view-source:")) {
+            if (url.startsWith("andesine://") || url.startsWith("view-source:")) {
                 favicon = "";
             }
 
-            if (url.startsWith("cobalt://")) {
-                title = url.split("cobalt://")[1];
+            if (url.startsWith("andesine://")) {
+                title = url.split("andesine://")[1];
                 title = title.charAt(0).toUpperCase() + title.slice(1);
             }
 
@@ -1424,7 +1424,7 @@ function Home() {
                                         ).split("/internal/viewsource?url=")[1];
                                 } else {
                                     var url =
-                                        "cobalt://" +
+                                        "andesine://" +
                                         web.current.contentWindow.location.pathname.split(
                                             "/internal/"
                                         )[1];
@@ -1473,14 +1473,14 @@ function Home() {
                                         : "";
 
                                     if (
-                                        url.startsWith("cobalt://") ||
+                                        url.startsWith("andesine://") ||
                                         url.startsWith("view-source:")
                                     ) {
                                         favicon = "";
                                     }
 
-                                    if (url.startsWith("cobalt://")) {
-                                        realTitle = url.split("cobalt://")[1];
+                                    if (url.startsWith("andesine://")) {
+                                        realTitle = url.split("andesine://")[1];
                                         realTitle =
                                             realTitle.charAt(0).toUpperCase() +
                                             realTitle.slice(1);
@@ -1676,7 +1676,7 @@ function Home() {
                                                 )[1];
                                         } else {
                                             var url =
-                                                "cobalt://" +
+                                                "andesine://" +
                                                 new URL(
                                                     // @ts-ignore
                                                     web.current.contentWindow.navigation.currentEntry.url
@@ -1721,15 +1721,15 @@ function Home() {
                                                 : "";
 
                                             if (
-                                                url.startsWith("cobalt://") ||
+                                                url.startsWith("andesine://") ||
                                                 url.startsWith("view-source:")
                                             ) {
                                                 favicon = "";
                                             }
 
-                                            if (url.startsWith("cobalt://")) {
+                                            if (url.startsWith("andesine://")) {
                                                 title =
-                                                    url.split("cobalt://")[1];
+                                                    url.split("andesine://")[1];
                                                 title =
                                                     title
                                                         .charAt(0)
@@ -1839,7 +1839,7 @@ function Home() {
                                     ).split("/internal/viewsource?url=")[1];
                             } else {
                                 var url =
-                                    "cobalt://" +
+                                    "andesine://" +
                                     web.current.contentWindow.location.pathname.split(
                                         "/internal/"
                                     )[1];
@@ -1892,8 +1892,8 @@ function Home() {
         setLoading(true);
 
         if (
-            value.startsWith("cobalt://") &&
-            internalURLS.includes(value.split("cobalt://")[1])
+            value.startsWith("andesine://") &&
+            internalURLS.includes(value.split("andesine://")[1])
         ) {
             if (search.current && search.current.value) {
                 search.current.value = value;
@@ -1901,7 +1901,7 @@ function Home() {
             if (web.current && web.current.contentWindow) {
                 // @ts-ignore
                 web.current.contentWindow.location = new URL(
-                    "/internal/" + value.split("cobalt://")[1],
+                    "/internal/" + value.split("andesine://")[1],
                     // @ts-ignore
                     window.location
                 );
